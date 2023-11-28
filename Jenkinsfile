@@ -3,7 +3,15 @@ pipeline {
   stages {
     stage('') {
       steps {
-        git(url: 'https://github.com/Cd-Boom/ParcialGestionManana202302.git', branch: 'main', credentialsId: '014ffe5f-b2c5-4f74-908f-6dd53950fb25')
+        sh '''D:
+
+cd Desarrollos\\Java\\ParcialGestionManana202302
+
+git remote add origin https://github.com/Cd-Boom/ParcialGestionManana202302.git
+  git branch -M main
+  git push -u origin main
+
+'''
       }
     }
 
